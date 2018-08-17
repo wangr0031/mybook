@@ -4,5 +4,9 @@
 
 ### 2. [配置中心管理](/pei-zhi-zhong-xing.md)
 
+### 3. [一键升级](/pei-zhi-zhong-xing.md)
+
+
+
 
 
