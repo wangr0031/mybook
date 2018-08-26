@@ -1,0 +1,45 @@
+{
+  "title": "端到端平台验收组-网络文档",
+  "description": "中兴软创-鲲鹏项目-端到端平台验收组-网络文档",
+  "language" : "zh-hans",
+  "plugins": [
+	"-search",
+	"search-pro",
+	"splitter",
+	"tbfed-pagefooter",
+	"todo",
+	"copy-code-button",
+	"alerts",
+	"simple-page-toc",
+	"prism",
+	"prism-themes",
+	"anchors",
+	"donate"
+  ],
+  "pluginsConfig": {
+    "search-pro": {
+      "cutWordLib": "nodejieba",
+	  "defineWord" : ["Gitbook Use"]
+    },
+    "tbfed-pagefooter": {
+      "copyright":"Copyright &copy 2018 ZTESOFT 端到端平台验收组",
+      "modify_label": "该文件修订时间：",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    },
+	"prism": {
+      "css": [
+         "prism-themes/themes/prism-base16-ateliersulphurpool.light.css"
+      ]
+    },
+	"simple-page-toc": {
+      "maxDepth": 3,
+      "skipFirstH1": true
+    },
+	"donate": {
+			"wechat": "images/wechatpay.png",
+			"alipay": "images/alipay.png",
+			"title": "您的支持将鼓励我继续创作！",
+			"button": "打赏"
+    }
+  }
+}
