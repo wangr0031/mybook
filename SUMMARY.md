@@ -24,6 +24,7 @@
   * [FAQ](pei-zhi-zhong-xing/faq.md)
   
 ## 一键升级
+* [一键升级](yi-jian-sheng-ji.md)
 
 
 
