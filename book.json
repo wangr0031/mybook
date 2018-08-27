@@ -1,6 +1,7 @@
 {
-  "title": "端到端平台验收组-网络文档",
-  "description": "中兴软创-鲲鹏项目-端到端平台验收组-网络文档",
+  "title": "端到端平台验收组-Gitbook",
+  "author" : "0027009406 wang.rong",
+  "description": "中兴软创-鲲鹏项目-端到端平台验收组-Gitbook",
   "language" : "zh-hans",
   "plugins": [
 	"-search",
@@ -14,7 +15,9 @@
 	"prism",
 	"prism-themes",
 	"anchors",
-	"donate"
+	"donate",
+	"local-video",
+	"edit-link"
   ],
   "pluginsConfig": {
     "search-pro": {
@@ -40,6 +43,10 @@
 			"alipay": "images/alipay.png",
 			"title": "您的支持将鼓励我继续创作！",
 			"button": "打赏"
+    },
+	"edit-link": {
+        "base": "https://github.com/wangr0031/mybook",
+        "label": "Edit This Page"
     }
   }
 }

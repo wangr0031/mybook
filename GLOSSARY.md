@@ -4,14 +4,14 @@
 ## Markdown
 Aaron Swartz 跟John Gruber共同设计的排版语言
 
-## ZCM
+## zcm
 zsmart新一代自研云平台产品
 
-## IaaS
+## Iaas
 (Infrastructure as a Service)基础设施即服务
 
-## PaaS
+## Paas
 (Platform as a Service)平台即服务
 
-## SaaS
+## Saas
 (Software as a Service)软件即服务
