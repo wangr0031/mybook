@@ -45,7 +45,7 @@
 			"button": "打赏"
     },
 	"edit-link": {
-        "base": "https://github.com/wangr0031/mybook",
+        "base": "https://github.com/wangr0031/mybook/blob/master",
         "label": "Edit This Page"
     }
   }
