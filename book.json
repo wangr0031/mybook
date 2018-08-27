@@ -3,6 +3,24 @@
   "author" : "0027009406 wang.rong",
   "description": "中兴软创-鲲鹏项目-端到端平台验收组-Gitbook",
   "language" : "zh-hans",
+  "links": {
+	"sidebar":{
+		"问题反馈":"https://github.com/wangr0031/mybook/issues"
+	}
+  },
+  "pdf": {
+        "fontSize": 12,
+        "footerTemplate": null,
+        "headerTemplate": null,
+        "margin": {
+            "bottom": 36,
+            "left": 62,
+            "right": 62,
+            "top": 36
+        },
+        "pageNumbers": false,
+        "paperSize": "a4"
+    },
   "plugins": [
 	"-search",
 	"search-pro",
