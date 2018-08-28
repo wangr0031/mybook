@@ -40,6 +40,7 @@
   * `attr_value`：与`attr_code`对应的**value**值
     * **attr_value填写说明**
   
+  
   |midware\_type|role\_code|attr\_code|attr\_value 说明|
   |:|:-|:-|:-|
   |ZCACHE|ZCACHE|**HOST_INFO**|按照(IP地址：用户名：密码)的顺序进行填写，用户名一般填root|
