@@ -1,12 +1,14 @@
 # 一键部署模板说明
 
 ## 1. IAAS 部署模板(iaas.xlsx)
+---
 
 > **\[info\] 提示**
 > 
 > 模板过于复杂，请咨询公司系统集成人员
 
 ## 2. PAAS&SAAS 部署模板(midware.xlsx)
+---
 
 > **\[info\] 说明**
 > **midware.xlsx**部署模板文件在Paas和Saas的部署中会使用到
@@ -99,25 +101,36 @@
 
 ### project
 * **project工作表**是在paas安装时，会根据这里的配置信息进行项目的创建
-  * `tenant_code`
-  * `project_code`
-  * `project_name`
+  * `tenant_code`：租户code
+  * `project_code`：项目code
+  * `project_name`：项目名称
   * `paas_platform`
   
 ### zone
-
+* **zone工作表**是在paas安装时，会根据这里的配置信息进行zone的创建，用来均衡应用的部署
+  * `zone_name`
+  * `project_code`
+  * `machine_ip_list`
 
 ### gateway cluster
+* **gateway cluster工作表**是用来在paas安装时，在ZCM系统中创建业务网关，统一IP访问
+  * `cluster_name`
+  * `project_code`
+  * `machine_ip_list`
+  * `vip`
 
-### cloud disk页签
+### cloud disk
 
-* **cloud disk页签**用来配置需要创建哪些云盘和对应的云盘大小
+* **cloud disk工作表**是在paas安装时，会将Iaas创建的云盘注册进zcm系统，应用使用云盘时，会从这里获取
+  * `tenant_code`
+  * `project_code`
+  * `pool_name`
+  * `machine_ip_list`
+  * `user_name`
+  * `password`
   * `cloud_disk_name`：云盘的名称
   * `size`：云盘的大小
 
-> **\[info\] 说明**
->
-> 在安装PAAS的时候会读取此处的配置信息进行云盘创建，在应用部署的时候，会读取**app.json**文件中的云盘挂载路径进行挂载
 
-### project页签
+
 
