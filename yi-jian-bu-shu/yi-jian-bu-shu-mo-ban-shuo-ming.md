@@ -26,7 +26,7 @@
   * `midware_name`：每条数据库配置的别名，在填写**app midware工作表**中的`midware_name`时，填写的内容需要在这里有定义
   * `db_name`：数据库的**service\_name**或**SID**
   * `midware_type`：中间件类型，目前只支持**ORACLE**(注意大写)
-  * `ip`：数据库的IP地址
+  * `ip`：数据库的IP地址或域名
   * `port`：数据库的TCP监听端口号
   * `schema`：数据库实例名
   * `username`：数据库用户名
