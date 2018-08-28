@@ -65,7 +65,7 @@
   * `app\_type`：应用的类型，分为有状态应用(statefull)和无状态应用(stateless)
   * `seq`：数据库脚本执行的顺序，指定不同产品的脚本的执行先后顺序
   * `project_code`：项目code，在应用配置导入时会根据项目code进行导入
-  * `tenant_code`：租户code，不用变更
+  * `tenant_code`：租户code，暂时没有使用
   * `load_balancer_port`：决定在导入应用时，业务网关导入到哪个业务网关端口中（默认请填写**80**）
 
 ### app midware
@@ -101,35 +101,37 @@
 
 ### project
 * **project工作表**是在paas安装时，会根据这里的配置信息进行项目的创建
-  * `tenant_code`：租户code
+  * `tenant_code`：租户code，固定使用
   * `project_code`：项目code
-  * `project_name`：项目名称
-  * `paas_platform`
+  * `project_name`：项目名称，最好保持和code一致
+  * `paas_platform`：固定使用`zpaas`,不需要做变更
   
 ### zone
 * **zone工作表**是在paas安装时，会根据这里的配置信息进行zone的创建，用来均衡应用的部署
-  * `zone_name`
-  * `project_code`
-  * `machine_ip_list`
+  * `zone_name`：固定使用，可以不做变更
+  * `project_code`：和之前定义的`project_code`一致
+  * `machine_ip_list`：需要添加入zone中的实际的物理IP
 
 ### gateway cluster
 * **gateway cluster工作表**是用来在paas安装时，在ZCM系统中创建业务网关，统一IP访问
-  * `cluster_name`
-  * `project_code`
-  * `machine_ip_list`
+  * `cluster_name`：业务网关的名称
+  * `project_code`：和之前定义的`project_code`一致
+  * `machine_ip_list`：由Iaas安装的时候规划和提供
   * `vip`：Iaas安装时分配给zcm的浮动IP
+  > 支持**vip**和**machine_ip_list**使用相同的值
 
 ### cloud disk
 
 * **cloud disk工作表**是在paas安装时，会将Iaas创建的云盘注册进zcm系统，应用使用云盘时，会从这里获取
-  * `tenant_code`
-  * `project_code`
-  * `pool_name`
-  * `machine_ip_list`
-  * `user_name`
-  * `password`
-  * `cloud_disk_name`：云盘的名称
-  * `size`：云盘的大小
+  * `tenant_code`：租户code，固定使用
+  * `project_code`：项目code
+  * `pool_name`：随便定义，建议名称具有意义
+  * `machine_ip_list`：Iaas创建云盘同时提供IP
+  * `user_name`：暂时没有用到，不能为空
+  * `password`：暂时没有用到，不能为空
+  * `cloud_disk_name`：云盘的名称，Iaas创建并提供
+  * `size`：暂时没有用到，不能为空，需要为数字
+
 
 
 
