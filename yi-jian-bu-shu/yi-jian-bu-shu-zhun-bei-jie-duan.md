@@ -22,7 +22,7 @@
 >
 > **5. **启动SIMs系统
 >
-> **6. **安装并启动一键部署系统\([http://种子机IP地址:8080/appmgr-web/zcmPortalIndex.html](http://种子机IP地址:8080/appmgr-web/zcmPortalIndex.html)\)
+> **6. **安装并启动一键部署系统(http://种子机IP地址:8080/appmgr-web/zcmPortalIndex.html)
 
 
 
