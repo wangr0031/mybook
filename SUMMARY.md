@@ -26,6 +26,9 @@
 ## 一键升级
 * [一键升级](yi-jian-sheng-ji.md)
   * [一键升级-导入版本包](yi-jian-sheng-ji/dao-ru-ban-ben-bao.md)
+  * [一键升级-升级编排](yi-jian-sheng-ji/sheng-ji-bian-pai.md)
+  * [一键升级-版本升级](yi-jian-sheng-ji/ban-ben-sheng-ji.md)
+  * [一键升级-版本回滚](yi-jian-sheng-ji/ban-ben-hui-gun.md)
 
 
 
