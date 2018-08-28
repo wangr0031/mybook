@@ -7,7 +7,7 @@
 > 
 > 模板过于复杂，请咨询公司系统集成人员
 
-## 2. PAAS&SAAS 部署模板(midware.xlsx)
+## 2. PAAS&SAAS 部署模板(midware.[](http://www.ronxue.cn:8093/attachment/)xlsx)
 ---
 
 > **\[info\] 说明**
