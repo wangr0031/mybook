@@ -18,7 +18,7 @@
 * 模板文件名称统一为`midware.xlsx`
 * 模板文件中各工作表名称和各工作表中字段名称**不能修改**
 
-### db info页签
+### db info
 
 * **db info页签**是数据库的基础配置信息，各个字段的说明如下
   * `midware_name`：每条数据库配置的别名，在填写**app midware工作表**中的`midware_name`时，填写的内容需要在这里有定义
@@ -30,7 +30,7 @@
   * `username`：数据库用户名
   * `password`：数据库用户名对应的密码
 
-### midware deploy页签
+### midware deploy
 
 * **midware deploy页签**里面配置的是中间件以及ZCM的信息，需要注意修改`attr_value`字段的ip地址
   * `midware_name`：中间件配置别名，在填写**app midware工作表**中`midware_name`时，填写的内容需要在这里有定义
@@ -52,43 +52,62 @@
   |ZCM|**ZCM**|HOST\_INFO||
   |ZCM|**ZCM**|HUBOR\_HOST||
   |ZCM|**ZCM**|ZCM\_HOST||
-  |ZCM|**ZCM**|ZCM\_VIR\_IP||
+  |ZCM|**ZCM**|ZCM\_VIR\_IP|ZCM平台部署需要的虚拟IP地址|
 
 
-### app info页签
+### app info
 
 * **app info页签**是应用信息
-  * `app_name`：应用名称，与**app\_midware页签**的`app_name`字段需要一致,**同时此字段和sftp服务器上的app目录下的zip文件名也要一致**
-  * `product_name`：产品名称，与**app\_midware页签**的`product_name`字段需要一致，**同时此字段和sftp服务器上的目录名也要一致**
-  * `image_name`：镜像名称，由CMO提供，目前不使用该字段
-  * `project_code`：项目名称，在应用配置导入时会根据项目code进行导入
+  * `app_name`：应用名称，与**app midware工作表**的`app_name`字段需要一致,**同时此字段和sftp服务器上的app目录下的zip文件名也要一致**
+  * `product_name`：产品名称，与**app midware页签**的`product_name`字段需要一致，**同时此字段和sftp服务器上的目录名也要一致**
+  * `app\_type`：应用的类型，分为有状态应用(statefull)和无状态应用(stateless)
+  * `seq`：数据库脚本执行的顺序，指定不同产品的脚本的执行先后顺序
+  * `project_code`：项目code，在应用配置导入时会根据项目code进行导入
+  * `tenant_code`：租户code，不用变更
   * `load_balancer_port`：决定在导入应用时，业务网关导入到哪个业务网关端口中（默认请填写**80**）
 
-### app midware页签
+### app midware
 
 > **\[danger\] 重要**
 >
 > **config\_attr\_value**与**midware\_name**不能全部为空，至少需要有一个有值，当两者都有值时**config\_attr\_value**优先级最高
 
-* **app midware页签**是应用组件配置信息，`old_app_name`字段无效，只是临时比较字段，后期可能会删除
-  * `product_name`：与**app info页签**的`product_name`一致
-  * `app_name`：与**app info页签**的`app_name`一致
+* **app midware**是应用配置信息
+  * `product_name`：与**app info工作表**的`product_name`一致，作用也是一样的
+  * `app_name`：与**app info工作表**的`app_name`一致
   * `midware_type`：目前支持ORACLE、DUBBO、ZCACHE、ZMQ、ZOOKEEPER、QMDB
   * `config_attr_key`：需要匹配替换的配置项的key值
-  * `config_attr_value`：如果这一栏填写了value，程序就不会去**db\_info页签**和**midware\_info页签**拼接数据
-  * `midware_name`：与**db\_info页签**或**midware\_deploy页签**的`midware_name`一致，程序会以此来拼接出实际的值
+  * `config_attr_value`：如果这一栏填写了value，程序就不会去**db info工作表**和**midware info工作表**拼接数据
+  * `midware_name`：与**db info工作表**或**midware deploy工作表**的`midware_name`一致，程序会以此来拼接出实际的值
   * `config_type`:配置类型，目前仅支持CFG
     > **\[info\] 说明**
     >
     > 例1：如果**midware\_type**是ORACLE且**config\_attr\_key**是jdbc，程序在匹配替换时，会自动匹配成“`jdbc.url`、`jdbc.username`、`jdbc.password`”三个key进行替换
     >
-    > 例2：如果**midware\_type**是DUBBO且**config\_attr\_key**是dubbo.registry.address,程序会根据配置获取到设置的值
+    > 例2：如果**midware\_type**是DUBBO且**config\_attr\_key**是dubbo.registry.address,程序会根据配置获取到设置的值，格式为**zookeeper://172.16.80.44:2181?backup=172.16.80.45:2181,172.16.80.46:2181**
     >
-    > 例3：如果**midware\_type**是QMDB时，需要在**config\_attr\_value**中填写
+    > 例3：如果**midware\_type**是ZOOKEEPER且**config\_attr\_key**是dubbo.registry.address,程序会根据配置获取到设置的值，格式为**172.16.80.44:2181,172.16.80.45:2181,172.16.80.46:2181**
+    >
+    > 例4：如果**midware\_type**是QMDB时，需要在**config\_attr\_value**字段中填写
 
-### project\_env页签
+### project env
 
-* **project\_env页签**是Charging产品用到的环境变量，但是其他不用环境变量的应用中，依旧也会有这些环境变量
+* **project env工作表**是Charging产品用到的环境变量，但是其他不用环境变量的应用容器中，依旧也会有这些环境变量的定义
+  * `project`：**project code**，程序会将项目环境变量导入的填写的项目code中
+  * `key`：环境变量的key值
+  * `value`：环境变量的value值
+
+### project
+* **project工作表**是在paas安装时，会根据这里的配置信息进行项目的创建
+  * `tenant_code`
+  * `project_code`
+  * `project_name`
+  * `paas_platform`
+  
+### zone
+
+
+### gateway cluster
 
 ### cloud disk页签
 
