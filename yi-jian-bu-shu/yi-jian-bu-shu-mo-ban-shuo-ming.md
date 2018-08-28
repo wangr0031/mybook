@@ -117,7 +117,7 @@
   * `cluster_name`
   * `project_code`
   * `machine_ip_list`
-  * `vip`
+  * `vip`：Iaas安装时分配给zcm的浮动IP
 
 ### cloud disk
 
