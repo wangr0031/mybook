@@ -8,7 +8,7 @@
 
 * [**导入基础文件包到FTP**](/yi-jian-bu-shu/sftp-server.md)：数据库脚本包、应用配置文件包、组件配置文件包等
 
-* [**一键部署模板**](/yi-jian-bu-shu/yi-jian-bu-shu-mo-ban-shuo-ming.md)：根据实际项目部署文档进行填写\(iaas.xlsx和midware.xlsx两个文件\)
+* [**一键部署模板**](/yi-jian-bu-shu/yi-jian-bu-shu-mo-ban-shuo-ming.md)：根据实际项目部署文档进行填写\(iaas.xlsx和midware.xlsx\)
 
 > **\[info\] 种子机准备步骤**
 >
