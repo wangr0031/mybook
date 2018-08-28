@@ -43,8 +43,8 @@
 	  "defineWord" : ["Gitbook Use"]
     },
     "tbfed-pagefooter": {
-      "copyright":"Copyright &copy 2018 ZTESOFT 端到端平台验收组",
-      "modify_label": "该文件修订时间：",
+      "copyright":"Copyright &copy 2018 WhaleCloud 鲲鹏项目-端到端平台验收组",
+      "modify_label": "最近修订时间: ",
       "modify_format": "YYYY-MM-DD HH:mm:ss"
     },
 	"prism": {
