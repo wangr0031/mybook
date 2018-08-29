@@ -39,9 +39,7 @@
   ],
   "pluginsConfig": {
     "fontsettings": {
-            "theme": 'white', 
-            "family": 'serif', 
-            "size": 2  
+      "family": 'serif'
     },
     "search-pro": {
       "cutWordLib": "nodejieba",
