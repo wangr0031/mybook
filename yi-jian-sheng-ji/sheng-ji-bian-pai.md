@@ -6,5 +6,10 @@
 * 能够支持不同业务的顺序编排
 
 在导入完版本包后，点击**编排情况**即可进入升级编排界面：
-![](/yi-jian-sheng-ji/bian-pai-an-niu.png)
+![编排情况](/yi-jian-sheng-ji/bian-pai-an-niu.png)
+
+在升级编排界面，进行升级顺序的编排，步骤如下：
+* 创建
+* 拖拽
+* 保存
 
