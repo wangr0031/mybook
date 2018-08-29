@@ -51,11 +51,11 @@ ZCMConfig配置中心的出现就是为了解决上述的问题，并更优化�
 
 ## 使用场景：
 
-* #### [K-V配置管理的典型应用场景](/chapter1/x-diamondmo-shi.md)
+* ### [K-V配置管理的典型应用场景](/chapter1/x-diamondmo-shi.md)
 
 K-V模式是针对JAVA的细粒度配置项管理方案，业务应用需要引入ZCMConfig的JAVA依赖，并依据规范详细配置，存在代码侵入，依赖高。
 
-* #### [原生文件模式典型应用场景](/chapter1/yuan-sheng-wen-jian-mo-shi.md)
+* ### [原生文件模式典型应用场景](/chapter1/yuan-sheng-wen-jian-mo-shi.md)
 
 原生文件模式是针对普遍适应的配置文件模式的解决方案。适应几乎所有的应用和语言，并且无任何的代码侵入。
 
