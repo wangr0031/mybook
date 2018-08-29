@@ -38,6 +38,11 @@
 	"edit-link"
   ],
   "pluginsConfig": {
+    "fontsettings": {
+            "theme": 'white', 
+            "family": 'serif', 
+            "size": 2  
+    },
     "search-pro": {
       "cutWordLib": "nodejieba",
 	  "defineWord" : ["Gitbook Use"]
