@@ -29,6 +29,8 @@
   * [一键升级-编排升级步骤](yi-jian-sheng-ji/sheng-ji-bian-pai.md)
   * [一键升级-版本升级](yi-jian-sheng-ji/ban-ben-sheng-ji.md)
   * [一键升级-版本回滚](yi-jian-sheng-ji/ban-ben-hui-gun.md)
+  * [FAQ](yi-jian-sheng-ji/faq.md)
+
 
 
 
