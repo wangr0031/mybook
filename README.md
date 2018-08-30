@@ -1,4 +1,5 @@
 # 鲲鹏项目平台验收组-网络文档
+![](https://jenkins.gedmin.as/job/check-manifest/badge/icon)
 
 ## 1. [系统一键部署](/yi-jian-bu-shu.md)
 
