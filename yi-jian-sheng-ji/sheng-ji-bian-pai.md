@@ -14,7 +14,7 @@
   
   ![编排情况](/yi-jian-sheng-ji/sheng-ji-bu-zhou-chuang-jian.png)
 * 拖拽待升级的应用到对应的**步骤**中
-* 保存编排模板
+* 保存编排模板，实例化至`数据库`，同时能够支持下一步的版本升级操作
 
   ![编排情况](/yi-jian-sheng-ji/bao-cun-bian-pai.png)
 
