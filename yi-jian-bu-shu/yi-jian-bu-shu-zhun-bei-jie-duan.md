@@ -22,9 +22,7 @@
 >
 > **4. **上传APP包，并配置YUM源
 >
-> **5. **启动SIMs系统
->
-> **6. **安装并启动一键部署系统 [http://种子机IP地址:8080/appmgr-web/zcmPortalIndex.html]
+> **5. **安装并启动一键部署系统 [http://种子机IP地址:8080/appmgr-web/zcmPortalIndex.html]
 
 
 
