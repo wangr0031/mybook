@@ -98,6 +98,38 @@
   * `project`：**project code**，程序会将项目环境变量导入的填写的项目code中
   * `key`：环境变量的key值
   * `value`：环境变量的value值
+  * 环境变量的说明：
+    
+    |变量名称|变量说明|
+    |:-|:-|
+    |CC_USER_NAME|cpc用户名|
+    |CC_PASSWORD|cpc数据库密码加密|
+    |CC_DSN|cpc对应dsn名称|
+    |CC_DB_TYPE|cpc对应数据库类型|
+    |RB_USER_NAME|rb用户名|
+    |RB_PASSWORD|rb数据库密码加密|
+    |RB_DSN|rb对应dsn名称|
+    |RB_DB_TYPE|rb对应数据库类型|
+    |CUSTCACHE_DS_NAME|zcache地址|
+    |CUSTCACHE_SET_DS_NAME|zcache地址|
+    |MDB1_DS_NAME|qmdb信息|
+    |MDB1_USER_NAME|qmdb用户名|
+    |MDB1_PASSWORD|qmdb密码|
+    |MDB1_DIRECT_DS_NAME|qmdb实例名|
+    |MQ_NAMESRV_ADDR|zmq地址|
+    |zookeeper_connection_string|zk地址|
+    |CC_ORACLE_HOST|cpc数据库ip|
+    |CC_ORACLE_PORT|cpc数据库port|
+    |CC_ORACLE_SERVICE_NAME|cpc数据库服务名|
+    |RB_ORACLE_HOST|rb数据库ip|
+    |RB_ORACLE_PORT|rb数据库port|
+    |RB_ORACLE_SERVICE_NAME|rb数据库服务名|
+    |SRC_CDR_PATH|话单目录，无特别要求，保留默认值|
+    |SRC_ERR_CDR_PATH|错单目录，无特别要求，保留默认值|
+    |CUSTCACHE_PASSWORD|默认留空，有需要再填值|
+    |CUSTCACHE_SET_PASSWORD|默认留空，有需要再填值|
+    |CLEAN_DATA_DURATION|默认留空，有需要再填值|
+    |RATE_DATE|默认留空，有需要再填值|
 
 ### project
 * **project工作表**是在paas安装时，会根据这里的配置信息进行项目的创建
