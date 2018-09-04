@@ -102,20 +102,20 @@
     
     |变量名称|变量说明|
     |:-|:-|
-    |CC_USER_NAME|cpc用户名|
+    |CC_USER_NAME|cpc用户名，一般情况为cpc|
     |CC_PASSWORD|**cpc数据库密码加密**|
     |CC_DSN|cpc对应dsn名称，可以不改|
     |CC_DB_TYPE|cpc对应数据库类型|
-    |RB_USER_NAME|rb用户名|
+    |RB_USER_NAME|rb用户名，一般情况为rb|
     |RB_PASSWORD|**rb数据库密码加密**|
     |RB_DSN|rb对应dsn名称，可以不改|
     |RB_DB_TYPE|rb对应数据库类型|
-    |CUSTCACHE_DS_NAME|zcache地址|
-    |CUSTCACHE_SET_DS_NAME|zcache地址|
-    |MDB1_DS_NAME|qmdb信息|
-    |MDB1_USER_NAME|qmdb用户名|
+    |CUSTCACHE_DS_NAME|zcache地址，只需要填写一个，如127.0.0.1：8001|
+    |CUSTCACHE_SET_DS_NAME|zcache地址，只需要填写一个，如127.0.0.1：8001|
+    |MDB1_DS_NAME|qmdb信息，格式DSN 空格 ip:port（注意是管理端口），例如ocs 172.16.80.41:13110|
+    |MDB1_USER_NAME|qmdb ocs的用户名，一般情况为ocs，不需要改|
     |MDB1_PASSWORD|**qmdb密码，需要密码加密**|
-    |MDB1_DIRECT_DS_NAME|qmdb实例名|
+    |MDB1_DIRECT_DS_NAME|qmdb的ocs实例名，一般情况为ocs，不需要改|
     |MQ_NAMESRV_ADDR|zmq地址|
     |zookeeper_connection_string|zk地址|
     |CC_ORACLE_HOST|cpc数据库ip|
