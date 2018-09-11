@@ -55,18 +55,20 @@ rm -rf /opt/zookeeper && ps -ef|grep zookeeper|grep -v grep | awk  '{ printf ("s
 
 A：不可以，D-BEP整套系统**至少**需要**5个节点**，需要部署在5台不同的物理机上。
 
-**Q8**：QMDB如何启动集群？
-A：
-1> 启动主管理节点进程:ocs为实例名，qmgr\_ocs/qmgr\_ocs为管理节点主机用户，密码
+**Q8**：QMDB如何启动集群？  
+A：  
+1&gt; 启动主管理节点进程:ocs为实例名，qmgr\_ocs/qmgr\_ocs为管理节点主机用户，密码
 
 ```
 mdbcMgrServer -c ocs --server qmgr_ocs/qmgr_ocs@管理节点IP:管理端口
 ```
-2> 启动集群
+
+2&gt; 启动集群
 
 ```
 mdbCluster admin/admin@ocs --oper start --cluster
 ```
+
 108机器的启动qmdb的命令如下：
 
 ```
@@ -78,7 +80,38 @@ su - qmgr_pcc
 mdbcMgrServer -c pcc --server qmgr_pcc@172.16.24.108:13210;
 mdbCluster admin/admin@pcc --oper start --cluster
 ```
+
 ---
+
+一键部署各模块负责人：更新于20180911
+
+| 模块名称 | 问题解决人 |
+| :--- | :--- |
+| 一键部署-IaaS | 王玉鹏 |
+| 一键部署-IaaS-安装操作系统 | 王玉鹏 |
+| 一键部署-IaaS-安装Keepalived | 王玉鹏 |
+| 一键部署-IaaS-安装Spool | 王玉鹏 |
+| 一键部署-IaaS-安装Oracle | 王玉鹏 |
+| 一键部署-IaaS-安装QMDB | 王列豹/王玉鹏 |
+| 一键部署-IaaS-QMDB初始化 | 闫其粹 |
+| 一键部署-PaaS | 闫其粹 |
+| 一键部署-PaaS-安装ZCM | 李林/杜家根 |
+| 一键部署-PaaS-导入项目 | 金鑫 |
+| 一键部署-PaaS-导入Zone | 金鑫 |
+| 一键部署-PaaS-导入云盘信息 | 金鑫 |
+| 一键部署-PaaS-导入网关 | 金鑫 |
+| 一键部署-PaaS-获取业务镜像信息 | 闫其粹 |
+| 一键部署-PaaS-上传业务镜像 | 闫其粹 |
+| 一键部署-PaaS-同步业务镜像 | 闫其粹 |
+| 一键部署-PaaS-检测业务镜像 | 闫其粹 |
+| 一键部署-PaaS-安装并启动ZK | 闫其粹 |
+| 一键部署-PaaS-安装并启动ZMQ | 闫其粹 |
+| 一键部署-PaaS-安装并启动ZCACHE | 闫其粹 |
+| 一键部署-SaaS | 程海明 |
+| 一键部署-SaaS-导入项目环境变量 | 闫其粹 |
+| 一键部署-SaaS-导入数据库脚本 | 昌龙 |
+| 一键部署-SaaS-导入无状态应用 | 黄宇峰/季恒婧 |
+| 一键部署-SaaS-导入有状态应用 | 孙冉 |
 
 
 
