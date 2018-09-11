@@ -51,10 +51,18 @@
   |ZMQ|**BROKER\_MASTER**|HOST\_INFO|按照(IP地址：用户名：密码)的顺序进行填写，用户名一般填root|
   |ZMQ|**BROKER\_SLAVE**|HOST\_INFO|按照(IP地址：用户名：密码)的顺序进行填写，用户名一般填root|
   |ZOOKEEPER|**ZOOKEEPER**|HOST\_INFO|按照(IP地址：用户名：密码)的顺序进行填写，用户名一般填root|
-  |ZCM|**ZCM**|HOST\_INFO||
-  |ZCM|**ZCM**|HUBOR\_HOST||
-  |ZCM|**ZCM**|ZCM\_HOST||
-  |ZCM|**ZCM**|ZCM\_VIR\_IP|ZCM平台部署需要的虚拟IP地址|
+  |ZCM|**ZCM**|HOST\_INFO|种子机的IP地址|
+  |ZCM|**ZCM**|ZCM_HOST_ANSIBLE|种子机的IP地址|
+  |ZCM|**ZCM**|ZCM_HOST_K8S_MASTER|k8s master节点，放在第一位的是主节点，第二位的是备节点|
+  |ZCM|**ZCM**|ZCM_HOST_K8S_NODE|k8s的计算节点|
+  |ZCM|**ZCM**|ZCM_HOST_HARBOR|镜像仓库的IP地址，放在第一位的是主节点，第二位的是备节点|
+  |ZCM|**ZCM**|ZCM_HOST_PORTAL|ZCM的界面的IP地址，放在第一位的是主节点，第二位的是备节点|
+  |ZCM|**ZCM**|ZCM_HOST_MONITOR|monitor的IP地址，默认保持和**ZCM_HOST_PORTAL**的IP一致|
+  |ZCM|**ZCM**|ZCM_VIR_IP_K8S|k8s对应的VIP|
+  |ZCM|**ZCM**|ZCM_VIR_IP_HARBOR|镜像仓库对应的VIP|
+  |ZCM|**ZCM**|ZCM_VIR_IP_PORTAL|ZCM界面对应的VIP|
+  |ZCM|**ZCM**|ZCM_VIR_IP_MONITOR|monitor对应的VIP|
+  |ZCM|**ZCM**|ZCM_HOST_ETHERNET_CARD_NAME|ZCM所用的物理IP对应的网卡名称，只能有一个且是相同的，否则就是IaaS部署有问题|
 
 
 ### app info
@@ -64,8 +72,6 @@
   * `product_name`：产品名称，与**app midware页签**的`product_name`字段需要一致，**同时此字段和sftp服务器上的目录名也要一致**
   * `app\_type`：应用的类型，分为有状态应用(statefull)和无状态应用(stateless)
   * `seq`：数据库脚本执行的顺序，指定不同产品的脚本的执行先后顺序
-  * `project_code`：项目code，在应用配置导入时会根据项目code进行导入
-  * `tenant_code`：租户code，暂时没有使用
   * `load_balancer_port`：决定在导入应用时，业务网关导入到哪个业务网关端口中（默认请填写**80**）
 
 ### app midware
@@ -134,22 +140,20 @@
 
 
 ### project
-* **project工作表**是在paas安装时，会根据这里的配置信息进行项目的创建
+* **project工作表**是在paas安装时，会根据这里的配置信息进行项目的创建，Saas层导入应用和配置也会获取此处的配置进行导入，此处配置很**重要**。
   * `tenant_code`：租户code，固定使用
   * `project_code`：项目code
-  * `project_name`：项目名称，最好保持和code一致
+  * `project_name`：项目名称，保持和`project_code`一致即可，
   * `paas_platform`：固定使用`zpaas`,不需要做变更
   
 ### zone
 * **zone工作表**是在paas安装时，会根据这里的配置信息进行zone的创建，用来均衡应用的部署
   * `zone_name`：固定使用，可以不做变更
-  * `project_code`：和之前定义的`project_code`一致
   * `machine_ip_list`：需要添加入zone中的实际的物理IP
 
 ### gateway cluster
 * **gateway cluster工作表**是用来在paas安装时，在ZCM系统中创建业务网关，统一IP访问
   * `cluster_name`：业务网关的名称
-  * `project_code`：和之前定义的`project_code`一致
   * `machine_ip_list`：由Iaas安装的时候规划和提供
   * `vip`：Iaas安装时分配给zcm的浮动IP
   > 支持**vip**和**machine_ip_list**使用相同的值
@@ -157,14 +161,15 @@
 ### cloud disk
 
 * **cloud disk工作表**是在paas安装时，会将Iaas创建的云盘注册进zcm系统，应用使用云盘时，会从这里获取
-  * `tenant_code`：租户code，固定使用
-  * `project_code`：项目code
   * `pool_name`：随便定义，建议名称具有意义
   * `machine_ip_list`：Iaas创建云盘同时提供IP
-  * `user_name`：暂时没有用到，不能为空
-  * `password`：暂时没有用到，不能为空
   * `cloud_disk_name`：云盘的名称，Iaas创建并提供
-  * `size`：暂时没有用到，不能为空，需要为数字
+
+### base cluster
+* **base cluster工作表**是在Paas安装时，会根据此处的配置创建基础集群，用于有状态应用的导入
+  * `cluster_name`：集群名称
+  * `machine_ip_list`：集群机器ip地址
+
 
 
 
