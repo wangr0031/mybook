@@ -100,6 +100,7 @@ mdbCluster admin/admin@pcc --oper start --cluster
 | 一键部署-PaaS-导入Zone | 金鑫 |
 | 一键部署-PaaS-导入云盘信息 | 金鑫 |
 | 一键部署-PaaS-导入网关 | 金鑫 |
+| 一键部署-PaaS-导入基础集群\(有状态应用\) | 孙冉 |
 | 一键部署-PaaS-获取业务镜像信息 | 闫其粹 |
 | 一键部署-PaaS-上传业务镜像 | 闫其粹 |
 | 一键部署-PaaS-同步业务镜像 | 闫其粹 |
