@@ -13,6 +13,7 @@
   * [一键部署-SAAS](yi-jian-bu-shu/yi-jian-bu-shu-saas.md)
   * [一键部署-模板说明](yi-jian-bu-shu/yi-jian-bu-shu-mo-ban-shuo-ming.md)
   * [一键部署-SFTP说明](yi-jian-bu-shu/yi-jian-bu-shu-sftp-server.md)
+  * [一键部署-所内部署](yi-jian-bu-shu/yi-jian-bu-shu-suo-nei-bushu.md)
   * [一键部署-应用格式](yi-jian-bu-shu/yi-jian-bu-shu-ying-yong-ge-shi.md)
   * [FAQ](yi-jian-bu-shu/yi-jian-bu-shu-faq.md)
 
