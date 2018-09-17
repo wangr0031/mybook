@@ -19,10 +19,10 @@
 
 ## ZCM常用功能
 
-* [ZCM介绍](zcm.md)
-  * [新增用户](zcm/xin-zeng-yong-hu.md)
+* [ZCM使用-基础篇](zcm.md)
+  * [系统管理](zcm/xin-zeng-yong-hu.md)
   * [中间件管理](zcm/zhong-jian-jian-guan-li.md)
-  
+
 ## 配置管理中心
 
 * [配置管理中心](pei-zhi-zhong-xing.md)
