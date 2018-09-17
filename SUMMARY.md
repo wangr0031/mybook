@@ -21,6 +21,7 @@
 
 * [ZCM介绍](zcm.md)
   * [新增用户](zcm/xin-zeng-yong-hu.md)
+  * [中间件管理](zcm/zhong-jian-jian-guan-li.md)
   
 ## 配置管理中心
 
