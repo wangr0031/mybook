@@ -17,6 +17,11 @@
   * [一键部署-应用格式](yi-jian-bu-shu/yi-jian-bu-shu-ying-yong-ge-shi.md)
   * [FAQ](yi-jian-bu-shu/yi-jian-bu-shu-faq.md)
 
+## ZCM常用功能
+
+* [ZCM介绍](zcm.md)
+  * [新增用户](zcm/xin-zeng-yong-hu.md)
+  
 ## 配置管理中心
 
 * [配置管理中心](pei-zhi-zhong-xing.md)
