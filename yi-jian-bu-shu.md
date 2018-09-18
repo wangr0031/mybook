@@ -32,7 +32,7 @@
 
 **一键部署工具，减少人为手工的批量操作，工具将会自动进行模块、程序等的自动安装和正确性校验，具体的部署可以分为4步：**
 
-![一键部署流程图](/yi-jian-bu-shu/yi-jian-bu-shu-liu-cheng-tu.png)
+![一键部署流程图](/images/oneclickdeploy/yi-jian-bu-shu-liu-cheng-tu.png)
 
 ## 1.[准备阶段](/yi-jian-bu-shu/yi-jian-bu-shu-zhun-bei-jie-duan.md)
 
