@@ -16,6 +16,7 @@
   * [一键部署-所内部署](yi-jian-bu-shu/yi-jian-bu-shu-suo-nei-bushu.md)
   * [一键部署-应用格式](yi-jian-bu-shu/yi-jian-bu-shu-ying-yong-ge-shi.md)
   * [一键部署-工具说明](yi-jian-bu-shu/yi-jian-bu-shu-code.md)
+  * [一键部署-种子机说明](yi-jian-bu-shu/yi-jian-bu-shu-zhong-zi-ji.md)
   * [FAQ](yi-jian-bu-shu/yi-jian-bu-shu-faq.md)
 
 ## ZCM常用功能
