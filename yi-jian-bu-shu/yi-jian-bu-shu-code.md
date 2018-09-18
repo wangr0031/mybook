@@ -27,3 +27,4 @@
 |导入数据库脚本|sccImportScriptAction|简单环节|自动|
 |导入无状态应用|deploySaaSAppAction|简单环节|自动|
 |导入有状态应用|deploySaaSStatefulAppAction|简单环节|自动|
+|跳过该步骤|successAction|简单环节|自动|
