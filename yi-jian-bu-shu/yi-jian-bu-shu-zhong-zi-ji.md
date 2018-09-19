@@ -22,7 +22,7 @@
 
 ## 一键部署步骤失败手动解决后跳过该步骤
 * 登录一键部署数据库(Mysql)
-* 切换到用户下
+* 切换到用户**zcamp_common_process**下
 * 执行如下命令，查询当前步骤状态
 
 ```
@@ -32,4 +32,11 @@ order by id desc limit 20;
 ```
 * 将需要跳过的步骤的`action`修改为**successAction**
 ![](/images/oneclickdeploy/zhong-zi-ji-mysql1.png)
+
+> **\[info\] Tips**
+>
+> 如果界面**重新部署**按钮出不来，可以先把`cp_ins_process` 表的`state`改成**P**
+>
+> 在通过历史界面进入，此时按钮将会展现，然后再将状态改回为F
+>
 
