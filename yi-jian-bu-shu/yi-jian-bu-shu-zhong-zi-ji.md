@@ -20,5 +20,16 @@
 * 将压缩镜像文件(**images.squashfs** 和 **restore_layers.sh**)拷贝到`/root/image/unzip_20180918`目录下
 * 在`/root/image`目录下执行命令`restore.sh unzip_20180918`即可解压镜像压缩文件
 
+## 一键部署步骤失败手动解决后跳过
+* 登录一键部署数据库(Mysql)
+* 切换到用户下
+* 执行如下命令，查询当前步骤状态
 
+```
+select id,ins_process_id,name,action,created_date,start_date,end_date,state,state_desc
+from cp_ins_task
+order by id desc limit 20;
+```
+* 将需要跳过的步骤的`action`修改为**successAction**
+![](/images/oneclickdeploy/zhong-zi-ji-mysql1.png)
 
