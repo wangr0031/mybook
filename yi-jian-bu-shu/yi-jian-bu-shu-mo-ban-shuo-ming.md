@@ -24,7 +24,7 @@
 
 * **db info页签**是数据库的基础配置信息，各个字段的说明如下
   * `midware_name`：每条数据库配置的别名，在填写**app midware工作表**中的`midware_name`时，填写的内容需要在这里有定义
-  * `db_name`：数据库的**service\_name**或**SID**
+  * `db_name`：不用修改，改字段没有被使用
   * `midware_type`：中间件类型，目前只支持**ORACLE**(注意大写)
   * `ip`：数据库的IP地址或域名
   * `port`：数据库的TCP监听端口号
