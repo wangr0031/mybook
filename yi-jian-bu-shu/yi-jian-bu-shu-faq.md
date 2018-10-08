@@ -57,13 +57,20 @@ A：不可以，D-BEP整套系统**至少**需要**5个节点**，需要部署�
 
 **Q8**：QMDB如何启动集群？  
 A：  
-1&gt; 启动主管理节点进程:ocs为实例名，qmgr\_ocs/qmgr\_ocs为管理节点主机用户，密码
+1&gt; 停集群
+
+```
+mdbCluster admin/admin@ocs --oper stop --cluster
+```
+
+2&gt; 启动主管理节点进程:ocs为实例名，qmgr\_ocs/qmgr\_ocs为管理节点主机用户，密码
 
 ```
 mdbcMgrServer -c ocs --server qmgr_ocs/qmgr_ocs@管理节点IP:管理端口
+mdbcMgrServer -c ocs --server qmgr_ocs/qmgr_ocs@172.16.80.61:13110
 ```
 
-2&gt; 启动集群
+3&gt; 启动集群
 
 ```
 mdbCluster admin/admin@ocs --oper start --cluster
