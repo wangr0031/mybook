@@ -157,13 +157,18 @@
   * `machine_ip_list`：由Iaas安装的时候规划和提供
   * `vip`：Iaas安装时分配给zcm的浮动IP
   > 支持**vip**和**machine_ip_list**使用相同的值
+  >
+  > **machine_ip_list**有多个时，换行分割
 
 ### cloud disk
 
 * **cloud disk工作表**是在paas安装时，会将Iaas创建的云盘注册进zcm系统，应用使用云盘时，会从这里获取
   * `pool_name`：随便定义，建议名称具有意义
-  * `machine_ip_list`：Iaas创建云盘同时提供IP
-  * `cloud_disk_name`：云盘的名称，Iaas创建并提供
+  * `cloud_disk_type`：云盘类型(glusterfs)
+  * `machine_ip_list`：Iaas创建云盘同时提供IP(该IP为NAS的网段不是业务网段)
+  * `cloud_disk_name`：云盘的名称，Iaas创建并提供，如：glv-vgdata01-cdr01001
+  * `cloud_disk_dir`: 云盘目录，为应用中使用的名称，如：cdr01001
+  * `mount_point`：与**cloud_disk_name**保持一直，如：glv-vgdata01-cdr01001
 
 ### base cluster
 * **base cluster工作表**是在Paas安装时，会根据此处的配置创建基础集群，用于有状态应用的导入
