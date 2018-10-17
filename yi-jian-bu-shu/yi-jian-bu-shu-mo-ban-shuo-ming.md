@@ -141,7 +141,7 @@
 
 ### project
 * **project工作表**是在paas安装时，会根据这里的配置信息进行项目的创建，Saas层导入应用和配置也会获取此处的配置进行导入，此处配置很**重要**。
-  * `tenant_code`：租户code，固定使用
+  * `tenant_code`：租户code
   * `project_code`：项目code
   * `project_name`：项目名称，保持和`project_code`一致即可，
   * `paas_platform`：固定使用`zpaas`,不需要做变更
