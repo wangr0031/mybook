@@ -173,7 +173,7 @@
 ### cloud disk
 
 * **cloud disk工作表**是在paas安装时，会将Iaas创建的云盘注册进zcm系统，应用使用云盘时，会从这里获取
-  * `pool_name`：随便定义，建议名称具有意义
+  * `pool_name`：随便定义，建议名称具有意义，名称**不能带下划线**
   * `cloud_disk_type`：云盘类型(glusterfs)
   * `machine_ip_list`：Iaas创建云盘同时提供IP(该IP为NAS的网段不是业务网段)
   * `cloud_disk_name`：云盘的名称，Iaas创建并提供，如：glv-vgdata01-cdr01001
