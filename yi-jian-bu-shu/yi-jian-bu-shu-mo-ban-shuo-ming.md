@@ -36,7 +36,9 @@
 
 * **midware deploy页签**里面配置的是中间件以及ZCM的信息，需要注意修改`attr_value`字段的ip地址
   * `midware_name`：中间件配置别名，在填写**app midware工作表**中`midware_name`时，填写的内容需要在这里有定义
+  * `midware_cluster_name`：中间件入库到监控页面的名称，建议取名要意义
   * `midware_type`：中间件类型，一般不用修改且是**大写**，此处与**app midware工作表**中的`midware_type`对应
+  * `midware_version`：中间件安装的版本信息，一般都是固定不需要修改
   * `role_code`：安装中间件和ZCM时，各个组的名称，**不需要修改**
   * `attr_code`：安装中间件和ZCM时，各项所需要的参数名
   * `attr_value`：与`attr_code`对应的**value**值
@@ -46,6 +48,7 @@
   |midware\_type|role\_code|attr\_code|attr\_value 说明|
   |:|:-|:-|:-|
   |ZCACHE|ZCACHE|**HOST_INFO**|按照(IP地址：用户名：密码)的顺序进行填写，用户名一般填root|
+  |ZCACHE|ZCACHE|**REDIS_CACHE_PORT_LIST**|zcache安装是使用的端口号（如果是多个，用逗号“，”分割）
   |ZMQ|**CLUSTER\_ATTR\_CODE**|ZOOKEEPER\_SERVER\_LIST|按照(ip地址：zookeeper端口号;ip地址：zookeeper端口号;ip地址：zookeeper端口号)格式，填写zookeeper的集群地址信息|
   |ZMQ|**NAMESRV**|HOST\_INFO|按照(IP地址：用户名：密码)的顺序进行填写，用户名一般填root|
   |ZMQ|**BROKER\_MASTER**|HOST\_INFO|按照(IP地址：用户名：密码)的顺序进行填写，用户名一般填root|
@@ -70,9 +73,13 @@
 * **app info页签**是应用信息
   * `app_name`：应用名称，与**app midware工作表**的`app_name`字段需要一致,**同时此字段和sftp服务器上的app目录下的zip文件名也要一致**
   * `product_name`：产品名称，与**app midware页签**的`product_name`字段需要一致，**同时此字段和sftp服务器上的目录名也要一致**
-  * `app\_type`：应用的类型，分为有状态应用(statefull)和无状态应用(stateless)
+  * `app\_type`：应用的类型，分为有状态应用(stateful)和无状态应用(stateless)
   * `seq`：数据库脚本执行的顺序，指定不同产品的脚本的执行先后顺序
   * `load_balancer_port`：决定在导入应用时，业务网关导入到哪个业务网关端口中（默认请填写**80**）
+  
+> **\[warning\] 注意**
+>
+> excel模板中的**app_name**需要与**sftp服务器上的app目录下的应用zip文件名**一致，否则导入时不会修改对应的配置项
 
 ### app midware
 
@@ -82,7 +89,7 @@
 
 * **app midware**是应用配置信息
   * `product_name`：与**app info工作表**的`product_name`一致，作用也是一样的
-  * `app_name`：与**app info工作表**的`app_name`一致
+  * `app_name`：与**app info工作表**的`app_name`一致，**同时此字段和sftp服务器上的app目录下的zip文件名也要一致**
   * `midware_type`：目前支持ORACLE、DUBBO、ZCACHE、ZMQ、ZOOKEEPER、QMDB
   * `config_attr_key`：需要匹配替换的配置项的key值
   * `config_attr_value`：如果这一栏填写了value，程序就不会去**db info工作表**和**midware info工作表**拼接数据
@@ -97,6 +104,8 @@
     > 例3：如果**midware\_type**是ZOOKEEPER且**config\_attr\_key**是dubbo.registry.address,程序会根据配置获取到设置的值，格式为**172.16.80.44:2181,172.16.80.45:2181,172.16.80.46:2181**
     >
     > 例4：如果**midware\_type**是QMDB时，需要在**config\_attr\_value**字段中填写
+    >
+    > 说明：应用导入修改配置项的功能，只支持配置文件后缀为**".properties"**
 
 ### project env
 
@@ -137,6 +146,7 @@
 |CUSTCACHE_SET_PASSWORD|zcache密码需要加密，默认留空，有需要再填值|
 |CLEAN_DATA_DURATION|默认留空，有需要再填值|
 |RATE_DATE|默认留空，有需要再填值|
+|PROJECT_CODE|默认填写3301|
 
 
 ### project
