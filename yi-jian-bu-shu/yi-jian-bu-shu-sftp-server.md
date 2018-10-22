@@ -257,7 +257,7 @@
     ```
   ├── balc  ##产品名称，此名称和部署模板中的app info工作表的product_name字段需要是一致的,否则无法获取其中的配置
   │   ├── app  ##应用目录，有几个应用，就会有几个zip文件
-  │   │   └── balc-web-product.zip  ##名称为balc-web-product的应用压缩文件
+  │   │   └── balc-web-product.zip  ##名称为balc-web-product的应用，该名称需要与部署模板中的app_name一列的值要一致，否则导入应用会失败或导入完应用配置项没有被修改
   │   └── sql  ##存放脚本文件
   │       ├── balc_product_balc_bc_oracle.sql
   │       ├── balc_product_init_balc_bc_oracle.sql
