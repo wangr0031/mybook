@@ -40,3 +40,14 @@ order by id desc limit 20;
 > 在通过历史界面进入，此时按钮将会展现，然后再将状态改回为F
 >
 
+## 点击开始按钮后，界面报主键冲突错误
+* 登录到一键部署工具后台，查看`bussiness.log`日志，一般会在里面查看到对应的是哪个表主键冲突了
+* 修改`am_table_seq`表中记录的对应表的序列，可以修复因为序列重复而出现的主键冲突错误。
+
+```
+select * from am_table_seq where table_name=upper('cp_ins_task');
+```
+
+
+
+
