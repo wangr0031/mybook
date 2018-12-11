@@ -13,6 +13,12 @@
 * [**一键部署模板**](/yi-jian-bu-shu/yi-jian-bu-shu-mo-ban-shuo-ming.md)：根据实际项目部署文档进行填写\(iaas.xlsx和midware.xlsx\),部署文档查看[请点这里](http://www.ronxue.cn:8093/attachment/)
 
 
+  > **\[info\] Tips**
+  >
+  > 种子机：安装有一键部署工具，且网络与待安装机器在同一网段的机器
+  >
+  > 
+
 
 
 
