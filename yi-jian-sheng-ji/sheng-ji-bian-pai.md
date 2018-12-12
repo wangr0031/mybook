@@ -10,8 +10,9 @@
 
 在升级编排界面，进行升级顺序的编排，步骤如下：
 * 创建升级步骤
+  * 升级步骤第一步默认是同步ZMQ Topic信息，如果没有Topic可以将其关闭
+  ![zmq-upgrade](/yi-jian-sheng-ji/zmq-sheng-ji-kai-guan.png)
   * 点击“增加编排组”并输入名称后，新增升级**步骤**
-  
   ![编排情况](/yi-jian-sheng-ji/sheng-ji-bu-zhou-chuang-jian.png)
 * 拖拽待升级的应用到对应的**步骤**中
 * 保存编排模板，实例化至`数据库`，同时能够支持下一步的版本升级操作
