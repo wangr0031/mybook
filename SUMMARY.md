@@ -24,6 +24,9 @@
 * [ZCM使用-基础篇](zcm.md)
   * [系统管理](zcm/xin-zeng-yong-hu.md)
   * [中间件管理](zcm/zhong-jian-jian-guan-li.md)
+  * [FAQ1-手动同步配置](zcm/FAQ-shou-dong-tong-bu-pei-zhi.md)
+
+
 
 ## 配置管理中心
 
