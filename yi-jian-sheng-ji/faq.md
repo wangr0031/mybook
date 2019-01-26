@@ -42,3 +42,48 @@ root@10.45.80.26[/root]#docker restart 99944678adac
 ```
 
 
+**Q4**：QMDB版本如何回退？  
+A：  
+1&gt; 停进程
+
+```
+ps -fu $LOGNAME|grep mdb|grep -v grep|awk '{print "kill -9 ",$2}'|sh
+```
+
+2&gt; 清理共享内存
+
+```
+ipcs -m |grep "$LOGNAME "|awk '{print "ipcrm -m",$2}'|sh
+```
+
+3&gt; 检查内存是否清理干净
+
+```
+ipcs -m |grep "$LOGNAME "
+```
+> 注意：内存状态为**dest**说明还有进程没有被**kill**
+
+4&gt; 将待回滚的版本，解压
+
+```
+rm -rf lib bin;tar xf QMDB90_CLUSTER_20190123191155.tar
+```
+
+5&gt; 1~4步需要在管理节点和数据节点都执行，完成后在管理节点启动qmdb
+
+```
+startQMDB
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
